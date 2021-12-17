@@ -4,21 +4,21 @@
   let Items = [
     {
       id: 1,
-      task: "buy cashew on friday",
+      task: "buy grocery on friday",
       date: "12/12/2021",
-      priority: 10,
+      priority: 5,
     },
     {
       id: 2,
       task: "party on saturday",
       date: "13/12/2021",
-      priority: 10,
+      priority: 4,
     },
     {
       id: 3,
       task: "lundary on sunday",
       date: "14/12/2021",
-      priority: 10,
+      priority: 1,
     },
   ];
   const handleclose = (e) => {
