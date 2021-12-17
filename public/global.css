@@ -1,0 +1,23 @@
+@font-face {
+	font-family: myFirstFont;
+	src: url('https://fonts.googleapis.com/css?family=Poppins');
+}
+*{
+	box-sizing: border-box;
+}
+html{
+	-webkit-tap-highlight-color: transparent;
+	scroll-behavior: smooth;
+}
+body {
+	color: #333;
+	margin: 0;
+	font-family: 'Poppins',sans-serif;
+}
+
+.t-head{
+	margin: 13px auto;
+    display: flex;
+    max-width: 300px;
+    font-weight: 800;
+}
