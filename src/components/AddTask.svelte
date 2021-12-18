@@ -18,10 +18,16 @@
       message = "task length should be higher than 10 character";
       btnDisable = true;
     } else {
-      btnDisable = false;
-      message = false;
+      if (!taskdate) {
+        message = "select task date";
+        btnDisable = true;
+      } else {
+        btnDisable = false;
+        message = false;
+      }
     }
   };
+  
   const handleSubmit = () => {
     if (taskdetaile.trim().length <= min) {
       message = "task length should be higher than 10 character";
@@ -47,8 +53,20 @@
       priorityNo = 1;
     }
   };
+
   const prioritySelect = (e) => {
     priorityNo = e.detail;
+  };
+
+  const handleDate = () => {
+    if (taskdate) {
+      message = false;
+      btnDisable = false;
+      if (taskdetaile.trim().length <= min) {
+        message = "task length should be higher than 10 character";
+        btnDisable = true;
+      }
+    }
   };
 </script>
 
@@ -56,7 +74,7 @@
   <label for="task-data" class="t-head">Task Details</label>
   <input type="text" id="task-data" class="text-box" bind:value={taskdetaile} on:input={handleChange} />
   <label for="task-date" class="t-head">Task Date</label>
-  <input type="date" id="task-date" class="text-box" bind:value={taskdate} />
+  <input type="date" id="task-date" class="text-box" bind:value={taskdate} on:input={handleDate} />
   <Priority on:priority-no={prioritySelect} />
   <Button disabled={btnDisable} type="submit">ADD</Button>
 </form>
