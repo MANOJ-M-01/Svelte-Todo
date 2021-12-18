@@ -4,7 +4,6 @@
 
   export let details = [];
 
-
   const dispatch = createEventDispatcher();
 
   const handleclose = (taskId) => {
@@ -24,7 +23,8 @@
     position: relative;
     margin: 10px 0;
     border-radius: 3px;
-    box-shadow:rgb(255 0 0 / 20%) 0px 1px 3px 0px, rgb(255 0 123 / 17%) 0px 1px 2px 0px;
+    box-shadow: rgb(212 211 255 / 20%) 0px 1px 3px 0px,
+      rgb(168 179 255 / 17%) 0px 1px 2px 0px;
   }
   .box div {
     word-break: break-all;
@@ -59,19 +59,19 @@
   .box button:hover {
     color: rgb(255, 97, 97);
   }
-  .shade_1{
+  .shade_1 {
     background: hsl(0deg 100% 95%);
   }
-  .shade_2{
+  .shade_2 {
     background: hsl(0deg 100% 90%);
   }
-  .shade_3{
+  .shade_3 {
     background: hsl(0deg 100% 85%);
   }
-  .shade_4{
+  .shade_4 {
     background: hsl(0deg 100% 80%);
   }
-  .shade_5{
+  .shade_5 {
     background: hsl(0deg 100% 75%);
   }
 </style>

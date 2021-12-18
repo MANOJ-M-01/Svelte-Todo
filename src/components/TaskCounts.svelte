@@ -1,19 +1,22 @@
 <script>
-export let count=''
+  export let count = "";
 </script>
+
 <div class="count-container">
-    <div class="count-bar">{count}</div>Tasks
+  <div class="count-bar">{count}</div>
+  Tasks
 </div>
+
 <style>
-    .count-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #666666;
-        font-weight: 600;
-        height: 50px;
-    }
-.count-bar{
+  .count-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666666;
+    font-weight: 600;
+    height: 50px;
+  }
+  .count-bar {
     margin-right: 10px;
     font-weight: 800;
     border-radius: 50%;
@@ -24,5 +27,5 @@ export let count=''
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 </style>

@@ -12,23 +12,58 @@
 <div class="t-head">Task Priority</div>
 <ul class="option__container">
   <li class="option__box">
-    <input type="radio" checked={selected === 1} name="priority" value="1" id="option-1" on:change={onChange} />
+    <input
+      type="radio"
+      checked={selected === 1}
+      name="priority"
+      value="1"
+      id="option-1"
+      on:change={onChange}
+    />
     <label for="option-1">1</label>
   </li>
   <li class="option__box">
-    <input type="radio" checked={selected === 2} name="priority" value="2" id="option-2" on:change={onChange} />
+    <input
+      type="radio"
+      checked={selected === 2}
+      name="priority"
+      value="2"
+      id="option-2"
+      on:change={onChange}
+    />
     <label for="option-2">2</label>
   </li>
   <li class="option__box">
-    <input type="radio" checked={selected === 3} name="priority" value="3" id="option-3" on:change={onChange} />
+    <input
+      type="radio"
+      checked={selected === 3}
+      name="priority"
+      value="3"
+      id="option-3"
+      on:change={onChange}
+    />
     <label for="option-3">3</label>
   </li>
   <li class="option__box">
-    <input type="radio" checked={selected === 4} name="priority" value="4" id="option-4" on:change={onChange} />
+    <input
+      type="radio"
+      checked={selected === 4}
+      name="priority"
+      value="4"
+      id="option-4"
+      on:change={onChange}
+    />
     <label for="option-4">4</label>
   </li>
   <li class="option__box">
-    <input type="radio" checked={selected === 5} name="priority" value="5" id="option-5" on:change={onChange} />
+    <input
+      type="radio"
+      checked={selected === 5}
+      name="priority"
+      value="5"
+      id="option-5"
+      on:change={onChange}
+    />
     <label for="option-5">5</label>
   </li>
 </ul>
