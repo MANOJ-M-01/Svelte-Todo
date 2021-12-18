@@ -20,7 +20,7 @@
       task: "lundary on sunday",
       date: "14/12/2021",
       priority: 1,
-    },
+    }
   ];
   const handleclose = (e) => {
     let taskId = e.detail;
