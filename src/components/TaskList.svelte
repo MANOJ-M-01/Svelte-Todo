@@ -4,6 +4,7 @@
 
   export let details = [];
 
+
   const dispatch = createEventDispatcher();
 
   const handleclose = (taskId) => {
@@ -11,10 +12,9 @@
   };
 </script>
 
-<div class="box" in:scale out:fade={{ duration: 500 }}>
+<div class="box shade_{details.priority}" in:scale out:fade={{ duration: 500 }}>
   <div class="head">{details.task}</div>
   <div class="sub">{details.date}</div>
-  <div class="sub">{details.priority}</div>
   <button on:click={() => handleclose(details.id)}>x</button>
 </div>
 
@@ -24,8 +24,7 @@
     position: relative;
     margin: 10px 0;
     border-radius: 3px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-      rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    box-shadow:rgb(255 0 0 / 20%) 0px 1px 3px 0px, rgb(255 0 123 / 17%) 0px 1px 2px 0px;
   }
   .box div {
     word-break: break-all;
@@ -41,7 +40,8 @@
   }
   .box .sub {
     margin: 5px;
-    color: #666666;
+    color: #5e5c5c;
+    font-weight: 600;
   }
   .box button {
     position: absolute;
@@ -50,13 +50,28 @@
     border: none;
     outline: none;
     background: none;
-    color: rgb(255 140 140);
+    color: rgb(255 104 104);
     font-weight: 700;
     font-size: 17px;
-    background: rgb(255 192 192);
+    background: rgb(255 212 212);
     border-radius: 50%;
   }
   .box button:hover {
     color: rgb(255, 97, 97);
+  }
+  .shade_1{
+    background: hsl(0deg 100% 95%);
+  }
+  .shade_2{
+    background: hsl(0deg 100% 90%);
+  }
+  .shade_3{
+    background: hsl(0deg 100% 85%);
+  }
+  .shade_4{
+    background: hsl(0deg 100% 80%);
+  }
+  .shade_5{
+    background: hsl(0deg 100% 75%);
   }
 </style>

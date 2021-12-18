@@ -53,12 +53,14 @@
     background: #ebebeb;
     box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
     transition: background 0.3s ease-in-out;
+    font-weight: 600;
+    color: #646464;
   }
   [type="radio"] {
     opacity: 0;
     position: absolute;
   }
   [type="radio"]:checked ~ label {
-    background: rgb(255, 126, 126);
+    background: rgb(255, 164, 164);
   }
 </style>

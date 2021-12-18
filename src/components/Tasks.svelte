@@ -1,18 +1,19 @@
 <script>
   import TaskList from "./TaskList.svelte";
   import AddTask from "./AddTask.svelte";
+  import TaskCounts from './TaskCounts.svelte'
   let Items = [
     {
       id: 1,
       task: "buy grocery on friday",
       date: "12/12/2021",
-      priority: 5,
+      priority: 3,
     },
     {
       id: 2,
       task: "party on saturday",
       date: "13/12/2021",
-      priority: 4,
+      priority: 2,
     },
     {
       id: 3,
@@ -29,10 +30,15 @@
     let newTask = e.detail;
     Items = [newTask, ...Items];
   };
+  $:taskcount=Items.length
 </script>
+<svelte:head>
+  <title>Tasks</title>
+</svelte:head>
 
 <div class="container">
   <AddTask on:new-task={handleNew} />
+  <TaskCounts count={taskcount}/>
   {#each Items as item (item.id)}
     <TaskList details={item} on:close-task={handleclose} />
   {/each}

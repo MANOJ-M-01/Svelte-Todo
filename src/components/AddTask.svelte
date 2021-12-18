@@ -4,7 +4,7 @@
   import Button from "./Button.svelte";
   import Priority from "./Priority.svelte";
 
-  let taskdetaile = "";
+  let taskdetaile ='';
   let taskdate = false;
   let btnDisable = true;
   let min = 10;
@@ -15,7 +15,7 @@
 
   const handleChange = (e) => {
     if (taskdetaile.trim().length <= min) {
-      message = "task length should be min 10 character";
+      message = "task length should be higher than 10 character";
       btnDisable = true;
     } else {
       btnDisable = false;
@@ -24,7 +24,7 @@
   };
   const handleSubmit = () => {
     if (taskdetaile.trim().length <= min) {
-      message = "task length should be min 10 character";
+      message = "task length should be higher than 10 character";
       btnDisable = true;
     }
     if (!taskdate) {
@@ -54,7 +54,7 @@
 
 <form on:submit|preventDefault={handleSubmit}>
   <label for="task-data" class="t-head">Task Details</label>
-  <input type="text" id="task-data" class="text-box" on:input={handleChange} bind:value={taskdetaile} />
+  <input type="text" id="task-data" class="text-box" bind:value={taskdetaile} on:input={handleChange}  />
   <label for="task-date" class="t-head">Task Date</label>
   <input type="date" id="task-date" class="text-box" bind:value={taskdate} />
   <Priority on:priority-no={prioritySelect} />
